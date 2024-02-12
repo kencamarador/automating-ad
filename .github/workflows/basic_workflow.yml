@@ -1,5 +1,5 @@
 on:
-  issue_created:
+  issues:
     types: [opened]
 
 jobs:
