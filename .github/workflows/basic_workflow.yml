@@ -1,10 +1,12 @@
-name: Basic Workflow Dispatch Example
+on:
+  issue_created:
+    types: [opened]
 
-on: 
-  workflow_dispatch:
-  
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "we did the thing"
+      - uses: actions/checkout@v2
+      - uses: actions/workflow_dispatch@v2
+        with:
+          workflow_file: .github/workflows/basic_workflow.yaml
