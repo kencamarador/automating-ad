@@ -1,6 +1,6 @@
 on:
-  issue_created:
-    types: [opened]
+issue_created:
+  types: [opened]
 
 jobs:
   build:
